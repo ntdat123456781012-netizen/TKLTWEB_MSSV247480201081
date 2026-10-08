@@ -1,0 +1,85 @@
+/* Áp dụng cho tất cả các phần tử HTML */
+* {
+    margin: 0;                 /* Xóa khoảng cách bên ngoài */
+    padding: 0;                /* Xóa khoảng cách bên trong */
+    box-sizing: border-box;    /* Tính cả padding và border vào kích thước */
+}
+
+
+/* Thiết lập cho toàn bộ trang */
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* Chọn kiểu chữ */
+    font-size: 14px;                            /* Kích thước chữ 14px */
+    padding: 30px;                              /* Cách nội dung với mép 30px */
+    background-color: #f9f9f9;                 /* Màu nền trang */
+}
+
+
+/* Khung chứa sidebar và nội dung */
+.container {
+    display: flex;                 /* Sắp xếp các phần tử con theo Flexbox */
+    border: 1px solid #777;        /* Tạo đường viền 1px màu xám */
+    max-width: 800px;              /* Chiều rộng tối đa là 800px */
+    background-color: #fff;        /* Màu nền trắng */
+    min-height: 250px;             /* Chiều cao tối thiểu 250px */
+}
+
+
+/* Thanh menu bên trái */
+.sidebar {
+    width: 200px;                  /* Chiều rộng sidebar là 200px */
+    background-color: #5d677a;      /* Màu nền sidebar */
+    flex-shrink: 0;                /* Không cho sidebar bị thu nhỏ */
+}
+
+
+/* Danh sách menu */
+.menu-vertical {
+    list-style: none;              /* Xóa dấu chấm của danh sách */
+}
+
+
+/* Từng mục trong danh sách */
+.menu-vertical li {
+    border-bottom: 1px solid #727c8e; /* Tạo đường kẻ phía dưới mỗi mục */
+}
+
+
+/* Các liên kết trong menu */
+.menu-vertical li a {
+    display: block;                /* Link chiếm toàn bộ chiều ngang */
+    padding: 10px 15px;            /* Trên/dưới 10px, trái/phải 15px */
+    color: #ffffff;                /* Màu chữ trắng */
+    text-decoration: none;         /* Xóa gạch chân của link */
+    font-weight: bold;             /* Chữ in đậm */
+}
+
+
+/* Khi đưa chuột vào link */
+.menu-vertical li a:hover {
+    background-color: #4a5363;     /* Đổi màu nền khi rê chuột */
+}
+
+
+/* Phần nội dung bên phải */
+.content {
+    flex-grow: 1;                  /* Chiếm phần không gian còn lại */
+    padding: 20px;                 /* Tạo khoảng cách bên trong 20px */
+    background-color: #f0f0f0;     /* Màu nền phần nội dung */
+}
+
+
+/* Tiêu đề h2 trong phần content */
+.content h2 {
+    font-size: 18px;               /* Kích thước chữ 18px */
+    color: #333333;                /* Màu chữ xám đậm */
+    margin-bottom: 15px;           /* Cách phần bên dưới 15px */
+    font-weight: bold;             /* Chữ in đậm */
+}
+
+
+/* Đoạn văn trong phần content */
+.content p {
+    color: #444444;                /* Màu chữ xám đậm */
+    line-height: 1.6;              /* Khoảng cách giữa các dòng */
+}
